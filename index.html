@@ -1,28 +1,111 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>استبيان لعبة الحصن</title>
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>استبيان لعبة الحصن</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;color:#f7f3ea;background:#101721;font-family:Arial,Tahoma,sans-serif}body:before{content:"";position:fixed;inset:0;z-index:-2;background:linear-gradient(135deg,#05090ed9,#0c1620a6),url("background.jpg");background-size:cover;background-position:center}.wrap{width:min(900px,94%);margin:28px auto 55px}.header,.card{background:#0c131cc7;border:1px solid #dab55b47;backdrop-filter:blur(10px);box-shadow:0 12px 35px #0005;border-radius:20px}.header{padding:25px;text-align:center;margin-bottom:15px}.header h1{margin:0;font-size:clamp(25px,5vw,40px)}.card{padding:20px;margin:13px 0}.q{font-size:18px;font-weight:700;line-height:1.7;margin-bottom:10px}.required .q:after{content:" *";color:#e3b557}input,textarea{width:100%;padding:13px;border-radius:12px;border:1px solid #ffffff26;background:#ffffff0d;color:#fff;font:inherit;outline:none}textarea{min-height:115px;resize:vertical}.choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:9px}.choice{display:flex;align-items:center;gap:9px;padding:12px;border:1px solid #ffffff18;border-radius:12px;background:#ffffff08;cursor:pointer}.choice input{width:auto;accent-color:#d8ad52}.stars{display:flex;direction:ltr;gap:5px}.stars input{display:none}.stars label{font-size:40px;color:#59616c;cursor:pointer;line-height:1}.stars label:has(~ input:checked),.stars input:checked+label{color:#d8ad52}button{width:100%;padding:15px;border:0;border-radius:14px;background:linear-gradient(135deg,#d9b35d,#9f742d);color:#17130c;font-size:18px;font-weight:800;cursor:pointer}.hidden{display:none!important}#success{display:none;text-align:center;padding:22px;border-radius:16px;background:#17301f;border:1px solid #4f9b62;color:#dff5e3;margin-top:15px}
-</style></head><body><div class="wrap"><header class="header"><h1>استبيان لعبة الحصن</h1></header><form id="survey">
-<section class="card required"><div class="q">1. الاسم داخل لعبه:</div><input name="name" required></section>
-<section class="card required"><div class="q">2. ID:</div><input name="id" required></section>
-<section class="card required"><div class="q">3. رقم مملكة:</div><input name="kingdom" required></section>
-<section class="card required"><div class="q">4. مدة اللعب في لعبه منذ انشاء الحساب:</div><input name="playDuration" required></section>
-<section class="card required"><div class="q">5. العمر(الحقيقي):</div><input name="age" type="number" required></section>
-<section class="card required"><div class="q">6. معرف ديسكورد الخاص بك:</div><input name="discord" required></section>
-<section class="card"><div class="q">7. URL قناة يوتيوب خاصه بك:</div><input name="youtube" type="url"></section>
-<section class="card required"><div class="q">8. كم تقيم نفسك من 5 نجوم في صناعة محتوى؟</div><div class="stars">
-<input id="s5" type="radio" name="rating" value="5" required><label for="s5">★</label><input id="s4" type="radio" name="rating" value="4"><label for="s4">★</label><input id="s3" type="radio" name="rating" value="3"><label for="s3">★</label><input id="s2" type="radio" name="rating" value="2"><label for="s2">★</label><input id="s1" type="radio" name="rating" value="1"><label for="s1">★</label></div></section>
-<section class="card required"><div class="q">9. كم هي خبرتك؟</div><div class="choices"><label class="choice"><input type="radio" name="experience" value="سنه" required> سنه</label><label class="choice"><input type="radio" name="experience" value="سنتين"> سنتين</label><label class="choice"><input type="radio" name="experience" value="ثلاث سنين"> ثلاث سنين</label><label class="choice"><input type="radio" name="experience" value="اربع سنين"> اربع سنين</label><label class="choice"><input type="radio" name="experience" value="ناشئ"> ناشئ</label></div></section>
-<section class="card required"><div class="q">10. كم قوتك الحاليه في لعبه؟</div><input name="power" required></section>
-<section class="card required"><div class="q">11. لاعب مجاني او لاعب يشحن؟</div><div class="choices"><label class="choice"><input type="radio" name="spender" value="لاعب مجاني" required> لاعب مجاني</label><label class="choice"><input type="radio" name="spender" value="لاعب يشحن"> لاعب يشحن</label></div></section>
-<section class="card required"><div class="q">12. هل لديك اصرار لصناعة المحتوى؟</div><div class="choices"><label class="choice"><input type="radio" name="determination" value="نعم" required> نعم</label><label class="choice"><input type="radio" name="determination" value="لا"> لا</label></div></section>
-<section class="card required"><div class="q">13. ما سبب قدومك لتصبح صانع محتوى هل بدافع راتب او مهنة او شغف؟</div><textarea name="reason" required></textarea></section>
-<section class="card required"><div class="q">14. كم تقييم لعبه من ناحيه كل شي؟</div><textarea name="gameRating" required></textarea></section>
-<section class="card required"><div class="q">15. هل لديك اقتراحات تنفذها لتحسين من صورة العبه؟</div><textarea name="suggestions" required></textarea></section>
-<section class="card required"><div class="q">16. هل كنت يوتيوبر في لعبه اخرى؟</div><div class="choices"><label class="choice"><input type="radio" name="otherYoutuber" value="نعم" required> نعم</label><label class="choice"><input type="radio" name="otherYoutuber" value="لا"> لا</label></div></section>
-<section id="conditional" class="card hidden"><div class="q">فما هي لعبه ولماذا تركت صناعة محتوى عنها</div><textarea name="otherGameReason"></textarea></section>
-<button id="submit" type="submit">إرسال الاستبيان</button></form><div id="success">تم إرسال الاستبيان بنجاح.</div></div>
-<script>
-const f=document.getElementById("survey"),c=document.getElementById("conditional"),t=c.querySelector("textarea"),b=document.getElementById("submit");
-document.querySelectorAll('input[name="otherYoutuber"]').forEach(x=>x.addEventListener("change",()=>{let y=x.checked&&x.value==="نعم";c.classList.toggle("hidden",!y);t.required=y;if(!y)t.value=""}));
-f.addEventListener("submit",async e=>{e.preventDefault();if(!f.reportValidity())return;b.disabled=true;b.textContent="جارٍ الإرسال...";const d=Object.fromEntries(new FormData(f));try{let r=await fetch("/api/submit",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)});if(!r.ok)throw 0;f.reset();c.classList.add("hidden");document.getElementById("success").style.display="block";window.scrollTo({top:0,behavior:"smooth"})}catch(_){alert("تعذر إرسال الاستبيان. حاول مرة أخرى.")}finally{b.disabled=false;b.textContent="إرسال الاستبيان"}});
-</script></body></html>
+*{box-sizing:border-box}
+
+body{
+margin:0;
+color:#f7f3ea;
+background:#101721;
+font-family:Arial,Tahoma,sans-serif;
+}
+
+body:before{
+content:"";
+position:fixed;
+inset:0;
+z-index:-2;
+background:
+linear-gradient(135deg,#05090ed9,#0c1620a6),
+url("background.jpg");
+background-size:cover;
+background-position:center;
+}
+
+.wrap{
+width:min(900px,94%);
+margin:28px auto 55px;
+}
+
+.header,.card{
+background:#0c131cc7;
+border:1px solid #dab55b47;
+backdrop-filter:blur(10px);
+box-shadow:0 12px 35px #0005;
+border-radius:20px;
+}
+
+.header{
+padding:25px;
+text-align:center;
+margin-bottom:15px;
+}
+
+.header h1{
+margin:0;
+font-size:clamp(25px,5vw,40px);
+}
+
+.card{
+padding:20px;
+margin:13px 0;
+}
+
+.q{
+font-size:18px;
+font-weight:700;
+line-height:1.7;
+margin-bottom:10px;
+}
+
+.required .q:after{
+content:" *";
+color:#e3b557;
+}
+
+input,textarea{
+width:100%;
+padding:13px;
+border-radius:12px;
+border:1px solid #ffffff26;
+background:#ffffff0d;
+color:#fff;
+font:inherit;
+outline:none;
+}
+
+textarea{
+min-height:115px;
+resize:vertical;
+}
+
+.choices{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:9px;
+}
+
+.choice{
+display:flex;
+align-items:center;
+gap:9px;
+padding:12px;
+border:1px solid #ffffff18;
+border-radius:12px;
+background:#ffffff08;
+cursor:pointer;
+}
+
+.choice input{
+width:auto;
+accent-color:#d8ad52;
+}
+
+.stars{
+display:flex;
+direction:ltr
